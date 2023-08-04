@@ -19,6 +19,9 @@ def main():
         input_image = Image.open(input_file_path)
         output_image = remove(input_image)
 
+        output_image = output_image.convert('RGB')
+
+
         # Guardar la imagen sin fondo en la carpeta de salida
         output_image.save(output_file_path)
 
